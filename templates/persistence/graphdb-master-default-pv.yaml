@@ -18,7 +18,7 @@ metadata:
     name: {{ $.Release.Namespace }}-graphdb-default-master-{{ $master_index }}-pv
 spec:
   claimRef:
-    name: graphdb-master-{{ $master_index }}-data-pvc
+    name: graphdb-master-{{ $master_index }}-data-dynamic-pvc-graphdb-master-1-0
     namespace: {{ $.Release.Namespace }}
   storageClassName: {{ $storageClassName }}
   accessModes:
