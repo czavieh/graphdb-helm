@@ -19,7 +19,7 @@ metadata:
     name: {{ $.Release.Namespace }}-graphdb-default-worker-{{ $worker_index }}-pv
 spec:
   claimRef:
-    name: graphdb-worker-{{ $worker_index }}-data-pvc
+    name: graphdb-worker-{{ $worker_index }}-data-dynamic-pvc-graphdb-worker-{{ $worker_index }}-0
     namespace: {{ $.Release.Namespace }}
   storageClassName: {{ $storageClassName }}
   accessModes:
